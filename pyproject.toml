@@ -20,6 +20,9 @@ dependencies = ["aiohttp"]
 dynamic = ["version"]
 readme = "README.md"
 
+[project.urls]
+Homepage = "https://github.com/autinerd/webmin-xmlrpc"
+
 [tool.setuptools.dynamic]
 version = {attr = "webmin_xmlrpc.__version__"}
 
