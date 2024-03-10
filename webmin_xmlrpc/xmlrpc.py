@@ -1,7 +1,7 @@
 """The XMLRPC client."""
 
-import xmlrpc.client
 from typing import Any
+import xmlrpc.client
 
 from aiohttp import ClientSession
 
