@@ -1,10 +1,13 @@
 """The client for Webmin XML-RPC."""
 
-from typing import Any
+from __future__ import annotations
 
-from aiohttp import ClientSession
+from typing import TYPE_CHECKING, Any
 
 from .xmlrpc import XMLRPCClient
+
+if TYPE_CHECKING:
+    from aiohttp import ClientSession
 
 
 class WebminInstance:
@@ -12,7 +15,7 @@ class WebminInstance:
 
     data: dict[str, Any]
 
-    def __init__(self, session: ClientSession):
+    def __init__(self, session: ClientSession) -> None:
         """Initialize the WebMin instance."""
         self._client = XMLRPCClient(session)
 

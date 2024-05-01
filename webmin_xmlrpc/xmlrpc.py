@@ -9,7 +9,7 @@ from aiohttp import ClientSession
 class XMLRPCClient:
     """Represent a XMLRPC client."""
 
-    def __init__(self, session: ClientSession, url: str = "/xmlrpc.cgi"):
+    def __init__(self, session: ClientSession, url: str = "/xmlrpc.cgi") -> None:
         """Initialize the XMLRPC client."""
         self._session = session
         self._url = url
